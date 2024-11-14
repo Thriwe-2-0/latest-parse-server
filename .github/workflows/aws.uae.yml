@@ -3,7 +3,7 @@ name: Deploy to Amazon ECR
 on:
   push:
     branches:
-      - "staging"
+      - "master"
 
 env:
   AWS_REGION: "me-central-1"                   # set this to your preferred AWS region, e.g. us-west-1
@@ -18,7 +18,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    environment: staging
+    environment: production
 
     steps:
     - name: Checkout
